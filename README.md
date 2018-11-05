@@ -4,9 +4,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name |text|null: false|
+|name |text|add_index : users, :name, :null: false|
 |Email|string|null: false, unique:true|
-
 
 ### Association
 - has_many :groups
@@ -32,7 +31,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name |text|null: false|
-
 
 ### Association
 - has_many :users
