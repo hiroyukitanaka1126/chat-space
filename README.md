@@ -6,7 +6,7 @@
 |------|----|-------|
 |name |text|null: false|
 |Email|string|null: false, unique:true|
-|group|references|null: false, foreign_key: true|
+
 
 ### Association
 - has_many :groups
