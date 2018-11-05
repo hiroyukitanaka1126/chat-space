@@ -4,12 +4,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name |text|add_index : users, :name, :null: false|
-|Email|string|null: false, unique:true|
+|name |text|index: true, null: false|
+|Email|string|null: false, unique: true|
 
 ### Association
-- has_many :groups, throgh: :members
-  has_many :members
+- has_many :members
+- has_many :groups, through: :members
 - has_many :messages
 
 
@@ -34,9 +34,9 @@
 |name |text|null: false|
 
 ### Association
+- has_many :members
 - has_many :users, through: :members
-  has_many :members
-  accepts_nested_attributes_for :members
+- accepts_nested_attributes_for :members
 - has_many :messages
 
 
