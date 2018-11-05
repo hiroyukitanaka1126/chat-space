@@ -8,7 +8,8 @@
 |Email|string|null: false, unique:true|
 
 ### Association
-- has_many :groups
+- has_many :groups, throgh: :members
+  has_many :members
 - has_many :messages
 
 
@@ -33,7 +34,9 @@
 |name |text|null: false|
 
 ### Association
-- has_many :users
+- has_many :users, through: :members
+  has_many :members
+  accepts_nested_attributes_for :members
 - has_many :messages
 
 
