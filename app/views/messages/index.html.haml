@@ -1,0 +1,38 @@
+!!!
+%html
+ %body
+  %div.warning
+   %div.title グループを作成しました。
+  %div.wrapper
+   %div.side-var
+    %div.header
+     %h3.header__name ユーザー名
+     %ul.header__list
+      %li
+       %a{href:'http://google.co.jp'}
+        %i.fa.fa-pencil-square-o
+      %li
+       %a{href:'http://google.co.jp'}
+        %i.fa.fa-cog
+    %div.groups
+     = render 'messages/group'
+     = render 'messages/group'
+     = render 'messages/group'
+   %div.main
+    %div.main__header
+     %div.main__header__left
+      %div.main__header__left--name sampleグループ
+      %div.main__header__left--members Member :メンバーA
+     %div.main__header__right
+      %a.main__haeder__right-edit-btn{href:'http://google.co.jp'} Edit
+    %div.body
+     = render 'messages/message'
+     = render 'messages/message'
+    %div.footer
+     %form(class="main__footer-form")
+      %input(placeholder ="type a message" class="type-message")
+      %div.image-icon
+       %label{for:"message_image"}
+        %i.fa.fa-picture-o
+        %input(class ="hidden " type="file" id="message_image")
+      %input(type ="submit" value="Send" class= "submit-form")
