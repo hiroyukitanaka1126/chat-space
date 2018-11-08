@@ -1,0 +1,36 @@
+.footer{
+  background-color: #DDDDDD;
+  height: 90px;
+  padding:20px 50px 20px 40px;
+  box-sizing: border-box;
+}
+.type-message{
+  height:50px;
+  width:calc(100% - 150px);
+  padding:0 10px;
+  font-size: 16px;
+  float:left;
+  border:none;
+}
+.image-icon{
+  background-color: $ColorWhite;
+  float:left;
+  line-height: 50px;
+  height:50px;
+  padding-right: 10px;
+}
+.fa.fa-picture-o{
+  font-size: 20px;
+}
+.hidden{
+  display: none;
+}
+.submit-form{
+  color:#FFF;
+  font-size: 16px;
+  height:50px;
+  border:none;
+  background-color: #38AEF0;
+  padding:0 20px;
+  float:right;
+}
