@@ -1,30 +1,10 @@
 @import "./reset";
 @import "variable";
+@import "announce";
+@import "main";
 @import "sidevar";
 @import "main-header";
 @import "main-body";
 @import "main-footer";
 @import "font-awesome";
 
-.wrapper{
-  display: flex;
-}
-
-.warning{
-background-color:$ColorBlue;
-}
-
-.title{
-  color:$ColorWhite;
-  text-align: center;
-}
-
-.side-var{
-  width:300px;
-  box-sizing: border-box;
-}
-
-.main{
-width: calc(100% - 300px);
-float:left;
-}
