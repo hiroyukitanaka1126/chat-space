@@ -4,6 +4,7 @@
   padding:20px 50px 20px 40px;
   box-sizing: border-box;
 }
+
 .type-message{
   height:50px;
   width:calc(100% - 150px);
@@ -12,6 +13,7 @@
   float:left;
   border:none;
 }
+
 .image-icon{
   background-color: $ColorWhite;
   float:left;
@@ -19,12 +21,15 @@
   height:50px;
   padding-right: 10px;
 }
+
 .fa.fa-picture-o{
   font-size: 20px;
 }
+
 .hidden{
   display: none;
 }
+
 .submit-form{
   color:#FFF;
   font-size: 16px;
