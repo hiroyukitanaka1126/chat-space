@@ -1,0 +1,49 @@
+.side-var{
+  width:300px;
+  box-sizing: border-box;
+}
+
+.header{
+  background-color:$ColorNaybe;
+  height :100px;
+  line-height: 100px;
+  padding: 0 20px;
+  color:$ColorWhite;
+  &__name{
+    display: inline-block;
+    font-size: 16px;
+    font-weight:bold;
+  }
+  &__list{
+    list-style: none;
+    float:right;
+    display: inline-block;
+    li{
+      display: inline;
+      a{
+        text-decoration: none;
+        color:#FFF;
+      }
+    }
+  }
+}
+
+.groups{
+  height:calc(100vh - 100px);
+  padding:0 20px;
+  background-color: $ColorNaybe2;
+}
+
+.group{
+  padding:20px 0px 40px;
+  a{
+    text-decoration: none;
+    color:#FFF;
+  }
+  &__name{
+    font-size:15px;
+  }
+  &__message{
+    font-size: 11px;
+  }
+}
