@@ -1,11 +1,11 @@
 !!!
 %html
  %body
-  %div.warning
-   %div.title グループを作成しました。
-  %div.wrapper
-   %div.side-var
-    %div.header
+  .announce
+   .title グループを作成しました
+  .wrapper
+   .side-var
+    .header
      %h3.header__name ユーザー名
      %ul.header__list
       %li
@@ -14,24 +14,24 @@
       %li
        %a{href:'http://google.co.jp'}
         %i.fa.fa-cog
-    %div.groups
+    .groups
      = render 'messages/group'
      = render 'messages/group'
      = render 'messages/group'
-   %div.main
-    %div.main__header
-     %div.main__header__left
-      %div.main__header__left--name sampleグループ
-      %div.main__header__left--members Member :メンバーA
-     %div.main__header__right
-      %a.main__haeder__right-edit-btn{href:'http://google.co.jp'} Edit
-    %div.body
+   .main
+    .main__header
+     .main__header__left
+      .main__header__left--name sampleグループ
+      .main__header__left--members Member :メンバーA
+     .main__header__right
+      = link_to 'Edit','http://google.co.jp'
+    .body
      = render 'messages/message'
      = render 'messages/message'
-    %div.footer
+    .footer
      %form(class="main__footer-form")
       %input(placeholder ="type a message" class="type-message")
-      %div.image-icon
+      .image-icon
        %label{for:"message_image"}
         %i.fa.fa-picture-o
         %input(class ="hidden " type="file" id="message_image")
