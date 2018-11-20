@@ -1,5 +1,11 @@
 .messages
- .messages__name メンバーA
- .messages__time 2018/11/07 14:14:06
- .messages__text テスト
+ .messages__name
+  = message.user.name
+ .messages__time 
+  = message.created_at
+ .messages__text 
+  - if message.body.present?
+   %p.messages__text__body
+    = message.body
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
