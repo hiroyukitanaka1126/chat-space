@@ -3,4 +3,21 @@
  %body
   .wrapper
    = render 'messages/side_bar'
-   = render 'messages/main'
+   .main
+    .main__header
+     .main__header__left
+      .main__header__left--name 
+       = @group.name
+      .main__header__left--members Member :@user.name
+     .main__header__right
+      = link_to 'Edit','http://google.co.jp'
+    .body
+     = render @messages
+    .footer
+     = form_for [@group, @message] do |f|
+      = f.text_field :body, class: 'type-message', placeholder: 'type a message'
+      .image-icon
+       = f.label :image, class: "message_image" do
+        = fa_icon 'picture-o', class: 'fa.fa-picture-o'
+        = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class:'submit-form'
