@@ -14,10 +14,10 @@
         = user.name
      .main__header__right
       = link_to 'Edit','http://google.co.jp'
-    .body
+    .chat
      = render @messages
-    .footer    
-     = form_for [@group, @message] do |f|
+    .footer
+     = form_for [@group, @message], html: {id: 'new_message'} do |f|
       .footer_body
        = f.text_field :body, class: 'type-message', placeholder: 'type a message'
        .image-icon
