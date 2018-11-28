@@ -1,11 +1,10 @@
 .messages
  .messages__name
   = message.user.name
- .messages__time 
+ .messages__time
   = simple_time(message.created_at)
- .messages__text 
+ .messages__text
   - if message.body.present?
    %p.messages__text__body
     = message.body
   = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-
