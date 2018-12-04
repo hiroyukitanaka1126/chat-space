@@ -23,14 +23,14 @@
         $.ajax({
            type: 'GET',
            url: '/users',
-           data: { name: input},
+           data: { name: input },
            dataType: 'json'
            })
          .done(function(users){
            $("#user-search-result").empty();
-             if (users.length !== 0){
+             if(users.length !== 0){
                users.forEach(function(user){
-               appendUserName(user);
+                 appendUserName(user);
                });
              }
           })
