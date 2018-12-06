@@ -65,9 +65,9 @@ $(function(){
       .done(function(data){
         var HTML = '';
         data.messages.forEach(function(message){
-            HTML += buildHTML(message);
-            $('.chat').append(HTML);
-            $('.chat').animate({scrollTop: $('.chat')[0].scrollHeight},'fast');
+          HTML += buildHTML(message);
+          $('.chat').append(HTML);
+          $('.chat').animate({scrollTop: $('.chat')[0].scrollHeight},'fast');
         })
       })
       .fail(function(){
