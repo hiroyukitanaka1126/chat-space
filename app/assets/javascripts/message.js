@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load', function() {
-  $(function(){
 
   // 送信したメッセージ（HTML）の作成
   function buildHTML(message){
@@ -78,5 +77,4 @@ $(document).on('turbolinks:load', function() {
     else {
       clearInterval(interval);
     }} , 5000 );
-  });
 });
