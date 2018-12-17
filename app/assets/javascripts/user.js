@@ -44,16 +44,15 @@ $(document).on('turbolinks:load', function() {
     $('#user-search-result').on('click','.chat-group-user__btn--add',function(){
       var member = $(this).data("user-name");
       var user_id = $(this).data("user-id");
-      $('')
-       var result = $.inArray(user_id,members)
-       if(result == -1){
-         members.push(user_id)
-         appendUserMember(member,user_id)
-         $('#user-search-result').empty()
-       }
-       else {
-         alert("登録済みのユーザーです")
-       }
+      var result = $.inArray(user_id,members);
+        if(result == -1){
+          members.push(user_id)
+          appendUserMember(member,user_id)
+          $('#user-search-result').empty()
+        }
+        else {
+          alert("登録済みのユーザーです")
+        }
     });
 
     $('#chat-group-users').on('click','.chat-group-user__btn--remove',function(){
