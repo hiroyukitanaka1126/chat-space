@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function() {
       var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
                    <input name='group[user_ids][]' type='hidden' value='${user_id}'>
                    <p class='chat-group-user__name'>${member}</p>
-                  <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
+                  <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn' data-user-id="${user_id}">削除</a>
                   </div>`
       $('#chat-group-users').append(html);
     }
@@ -40,14 +40,25 @@ $(document).on('turbolinks:load', function() {
       };
     });
 
+    var members = []
     $('#user-search-result').on('click','.chat-group-user__btn--add',function(){
       var member = $(this).data("user-name");
       var user_id = $(this).data("user-id");
-      appendUserMember(member,user_id)
-      $('#user-search-result').empty()
+      var result = $.inArray(user_id,members);
+        if(result == -1){
+          members.push(user_id)
+          appendUserMember(member,user_id)
+          $('#user-search-result').empty()
+        }
+        else {
+          alert("登録済みのユーザーです")
+        }
     });
 
     $('#chat-group-users').on('click','.chat-group-user__btn--remove',function(){
+      var user_id = $(this).data("user-id");
+      var num = members.indexOf(user_id)
+      members.splice(num, 1)
       $(this).parent().remove()
     });
 });
